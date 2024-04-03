@@ -21,7 +21,7 @@ prompt = PromptTemplate(
 )
 
 def load_LLM(openai_api_key):
-    llm = OpenAI(model_name='gpt-3.5-turbo-instruct', temperature=.7, openai_api_key=openai_api_key)
+    llm = OpenAI(model_name='gpt-3.5-turbo-instruct', temperature=0.7, max_tokens=600, openai_api_key=openai_api_key)
     return llm
 
 st.set_page_config(page_title="Customer tailored content", page_icon=":robot:")
